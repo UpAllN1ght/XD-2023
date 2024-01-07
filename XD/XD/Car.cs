@@ -13,6 +13,10 @@ namespace XD
         public int maxSpeed;
         public int year;
 
+        public bool Year { get; internal set; }
+        public bool Name { get; internal set; }
+        public bool Color { get; internal set; }
+
         public Car(string nameName, string colorName, int yearValue, int maxSpeedValue)
         {
             name = nameName;
@@ -20,12 +24,10 @@ namespace XD
             maxSpeed = maxSpeedValue;
             year = yearValue;
         }
-
         public Car(string nameName)
         {
             name = nameName;
         }
-
         public void fullThrottle()
         {
             Console.WriteLine(name + " is going at the speed of " + maxSpeed);
